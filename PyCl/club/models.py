@@ -23,8 +23,8 @@ class MeetingMinutes(models.Model):
 
     
 
-    def __str__(self):
-        return self.meetingminutesname
+    def _str_(self):
+        return self.minutestext
     
     class Meta:
         db_table='meetingminutes'
@@ -59,7 +59,7 @@ class Event(models.Model):
     eventdescription=models.CharField(max_length=255)
         
     def __str__(self):
-        return self.eventname
+        return self.eventtitle
     
     class Meta:
         db_table='event'
